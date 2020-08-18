@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+body{
+    background-color: blueviolet;
+}
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 10%;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
