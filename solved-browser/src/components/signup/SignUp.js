@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import M from 'materialize-css'
@@ -10,7 +10,7 @@ const [drivingLicenseNumber, setDrivingLicenseNumber] = useState('');
 const [password,setPassword] = useState('');
 
 const postDataBySignUp = async () => {
-  const response = await  axios.post('/auth/driver/signup',
+  const response = await  axios.post('/api/v1/auth/driver/signup',
     { drivingLicenseNumber,
         password
     },    
@@ -18,13 +18,14 @@ const postDataBySignUp = async () => {
             "Content-Type":"application/json"
     }},  
   ) 
-    const res = await response.data ;
-    if(res.error){
-        M.toast({html:res.error, classes: 'rounded'})
+  console.log(response)
+    const data = await response.data ;
+    if(data.error){
+        M.toast({html:data.error, classes: 'rounded'})
     }
     else{
-      console.log(res.message)
-      M.toast({html:res.message})
+      
+      M.toast({html:data.message})
       history.push('/login')
     }
  

@@ -20,8 +20,8 @@ const NavBar = () => {
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-link active" href="t#">Home <span class="sr-only">(current)</span></a>
-      <li>  <Link to='/login'>Login</Link></li>
-          <li><Link to="/signup">Signup</Link></li>
+      <li>  <Link className='nav-link'  to='/login'>Login</Link></li>
+      <li><Link className='nav-link' to="/signup">Signup</Link></li>
       <li><Link class="nav-link" to="/course">Course</Link></li>
     </div>
   </div>
