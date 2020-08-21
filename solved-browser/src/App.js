@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {useHistory, Switch, Route, BrowserRouter,} from 'react-router-dom';
-import {NavBar, SignUp, Course, LogIn, OneCourse} from '../src/components/index'
+import {NavBar, SignUp, Course, LogIn, OneCourse, Footer} from '../src/components/index'
 
 const Routing = () => {
   const history = useHistory();
@@ -32,6 +32,7 @@ function App() {
       <BrowserRouter>
       <NavBar />
       <Routing/>
+      <Footer />
       </BrowserRouter>
       
     </div>

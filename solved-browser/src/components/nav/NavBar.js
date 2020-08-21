@@ -12,20 +12,47 @@ const NavBar = () => {
 //  }
  
  return(
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#target">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link active" href="t#">Home <span class="sr-only">(current)</span></a>
-      <li>  <Link className='nav-link'  to='/login'>Login</Link></li>
-      <li><Link className='nav-link' to="/signup">Signup</Link></li>
-      <li><Link class="nav-link" to="/course">Course</Link></li>
+  // <!-- Header area -->
+  <header class="header-area">
+
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+
+        <nav class="classy-navbar justify-content-between" id="pocaNav">
+
+          {/* <!-- Logo --> */}
+          <Link class="nav-brand" to="/home"><img src="assets/img/core-img/lo-go.png.png" alt="" class="img-fluid"  id="black-logo"/></Link>
+          <Link class="nav-brand" to="/home" ><img src="assets/img/core-img/white-logo.png" alt="" class="img-fluid" id="white-logo"/></Link>
+    
+          {/* <!-- Navbar Toggler --> */}
+          <div class="classy-navbar-toggler">
+            <span class="navbarToggler"><span></span><span></span><span></span></span>
+          </div>
+
+          {/* <!-- Menu --> */}
+          <div class="classy-menu">
+
+            {/* <!-- Menu Close Button --> */}
+            <div class="classycloseIcon">
+              <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+            </div>
+
+            {/* <!-- Navbar link --> */}
+            <div class="classynav">
+              <ul id="nav">
+                <li class="current-item"><Link to="/home">Home</Link></li>
+                <li><Link to="/course">Course</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+              </ul>
+
+            </div>
+            {/* <!-- Nav End --> */}
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
-</nav>
+  </header>
  )   
 }
 

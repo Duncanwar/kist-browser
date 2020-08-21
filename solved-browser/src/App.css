@@ -11,3 +11,9 @@ body{
     background-color: aquamarine;
     border-radius: 5px;
 }
+/* .course{
+   
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 100%;
+} */
