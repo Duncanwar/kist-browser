@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import Axios from 'axios';
 import Block from './block'
+import { Footer } from '..';
 
 const  Course = () => {
     const [data,setData] = useState([])
@@ -29,7 +30,7 @@ const  Course = () => {
                 <div class="poca-course-area style-2 d-flex align-items-center flex-wrap">
                   <div class="poca-course-thumbnail">
         
-                    <img src="assets/img/bg-img/moto-1.jpg" alt=""/>
+                    <img src={course.coursePhoto} alt=""/>
                   </div>
         
         
@@ -40,7 +41,7 @@ const  Course = () => {
                     {/* <!-- course Player --> */}
                     <div class="poca-course-player">
                       <audio preload="auto" controls>
-                        <source src="assets/audio/dummy-audio.mp3" />
+                        <source src={course.courseAudio} />
                       </audio>
                     </div>
                     {/* <!-- Likes, Share & Download --> */}
@@ -48,7 +49,7 @@ const  Course = () => {
         
                       <div>
         
-                        <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                        <Link to="/"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                       </div>
                     </div>
                   </div>
@@ -59,8 +60,9 @@ const  Course = () => {
             </div>
             </div>
  ) })};
-
+ <Footer />
  </div>
+
     );
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Block = () =>{
     return(
-        <div class="row row-cols-1 row-cols-md-2">
+        <div class="">
           <div class="breadcumb-area bg-img bg-overlay course" style={{backgroundImage: "url('assets/img/bg-img/2.jpg')"}}>
           <div class="container h-100">
             <div class="row h-100 align-items-center">

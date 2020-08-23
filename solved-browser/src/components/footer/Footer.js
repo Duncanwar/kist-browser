@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return(
+  
         <footer class="footer-area section-padding-80-0">
+          <hr />
    <div class="container">
      <div class="row">
  
@@ -11,9 +14,9 @@ const Footer = () => {
          <div class="single-footer-widget mb-80">
            <h4 class="widget-title">About Us</h4>
  
-           <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+           <p>It is Link long established fact that a reader will be distracted by the readable content.</p>
            <div class="copywrite-content">
-             <p>&copy;Copyright &copy;{document.write(new Date().getFullYear())} All rights reserved  <a href="#" target="_blank">SolveD</a></p>          </div>
+             <p>&copy;Copyright &copy;{new Date().getFullYear()} All rights reserved  <Link to="/" target="_blank">SolveD</Link></p>          </div>
          </div>
        </div>
  
@@ -27,12 +30,12 @@ const Footer = () => {
  
            <div class="single-latest-courses">
              <p class="courses-date">December 8, 2018</p>
-             <a href="#" class="courses-title">Driver in the air</a>
+             <Link to="#" class="courses-title">Driver in the air</Link>
            </div>
  
            <div class="single-latest-courses">
              <p class="courses-date">December 8, 2018</p>
-             <a href="#" class="courses-title">Driver in the air</a>
+             <Link to="#" class="courses-title">Driver in the air</Link>
            </div>
          </div>
        </div>
@@ -44,8 +47,8 @@ const Footer = () => {
            <h4 class="widget-title">Follow Us</h4>
  
            <div class="app-download-button mt-30">
-             <a href="#"><img src="assets/img/core-img/app-store.png" alt=""/></a>
-             <a href="#"><img src="assets/img/core-img/google-play.png" alt=""/></a>
+             <Link to="#"><img src="assets/img/core-img/app-store.png" alt=""/></Link>
+             <Link to="#"><img src="assets/img/core-img/google-play.png" alt=""/></Link>
            </div>
          </div>
        </div>
