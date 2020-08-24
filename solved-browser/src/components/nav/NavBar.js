@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
 const NavBar = () => {
-   // const history = useHistory();
+// const history = useHistory();
  
 //  const renderList = () => {
 //      return ([
@@ -42,8 +42,6 @@ const NavBar = () => {
               <ul id="nav">
                 <li class="current-item"><Link to="/home">Home</Link></li>
                 <li><Link to="/course">Course</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
               </ul>
 
             </div>

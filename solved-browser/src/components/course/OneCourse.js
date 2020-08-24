@@ -14,6 +14,7 @@ const getOneCourse = async() => {
     console.log(courseName)
     const response = await Axios(`/api/v1/courses/${courseName}`);
     console.log(response);
+    setCourse(response.data)
 }
 return(
     <div class="row row-cols-1 row-cols-md-2">

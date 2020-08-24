@@ -8,7 +8,6 @@ const Routing = () => {
 
   return(
     <Switch>
-
       <Route path="/signup">
         <SignUp/>
       </Route>
