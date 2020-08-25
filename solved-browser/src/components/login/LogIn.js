@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import axios from 'axios';
 import M from 'materialize-css'
 import { useHistory } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 const Login = () => {
+  const authContext = useContext(AuthContext)
   const history =  useHistory();
   const [drivingLicenseNumber,setDrivingLicenseNumber] = useState('');
   const [password,setPassword] = useState('');
@@ -16,12 +18,14 @@ const Login = () => {
     {headers:{
       'Content-Type':'application/json'
     }},) 
-const data = response.data;
+const data = await response.data;
 console.log(data)
 if(data.error){
   M.toast({html: data.error})
 }
 else{
+  
+  authContext.setAuthState(data)
   console.log(data.message);
   M.toast({html:data.message})
   history.push('/course');

@@ -1,19 +1,31 @@
-import React from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
+import { useHistory, Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 const NavBar = () => {
-// const history = useHistory();
- 
-//  const renderList = () => {
-//      return ([
-//       <li>  <Link to='/login'>Login</Link></li>,
-//       <li><Link to="/signup">Signup</Link></li>]
-//      )
-//  }
- 
+  const authContext =  useContext(AuthContext)
+
+ const renderList = () => {
+   
+   if(authContext.authState.token){
+     console.log(authContext.authState.token)
+     return[
+     <li><button onClick={authContext.logOut}>logout</button></li>,
+     
+     ]
+   }else
+   {
+     return [
+      <li>  <Link to='/login'>Login</Link></li>,
+      <li><Link to="/signup">Signup</Link></li>]
+     
+   }
+ }
+
+
  return(
   // <!-- Header area -->
-  <header class="header-area">
+  <header class="navs header-area">
 
     <div class="main-header-area">
       <div class="classy-nav-container breakpoint-off">
@@ -39,9 +51,10 @@ const NavBar = () => {
 
             {/* <!-- Navbar link --> */}
             <div class="classynav">
-              <ul id="nav">
-                <li class="current-item"><Link to="/home">Home</Link></li>
-                <li><Link to="/course">Course</Link></li>
+              <ul class="current-item" id="nav">
+              <li class="current-item"><NavLink to="/home">Home</NavLink></li>
+      <li class=""><NavLink to="/course">Course</NavLink></li>
+                {renderList()}
               </ul>
 
             </div>

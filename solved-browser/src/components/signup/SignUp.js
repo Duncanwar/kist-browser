@@ -1,10 +1,11 @@
-import React, { useState} from 'react';
+import React, { useState, useContext} from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import M from 'materialize-css'
+import { AuthContext } from '../../context/AuthContext';
 
 const SignUp = () => {
-
+const authContext = useContext(AuthContext)
 const history = useHistory();
 const [drivingLicenseNumber, setDrivingLicenseNumber] = useState('');
 const [password,setPassword] = useState('');
@@ -20,18 +21,21 @@ const postDataBySignUp = async () => {
   ) 
   console.log(response)
     const data = await response.data ;
+    
     if(data.error){
-       return(
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-       )
+      M.toast({html:data.error})
+      console.log(data.error)
+      //  return(
+      //   <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      //   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      //   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      //     <span aria-hidden="true">&times;</span>
+      //   </button>
+      // </div>
+      //  )
     }
     else{
-      
+      authContext.setAuthState(data)
       M.toast({html:data.message})
       history.push('/login')
     }

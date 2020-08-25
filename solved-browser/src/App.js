@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import {useHistory, Switch, Route, BrowserRouter,} from 'react-router-dom';
 import {NavBar, SignUp, Course, LogIn, OneCourse, Footer} from '../src/components/index'
+import {AuthProvider} from './context/AuthContext'
+
 
 const Routing = () => {
   const history = useHistory();
@@ -20,6 +22,9 @@ const Routing = () => {
       <Route exact path='/course/:courseName' component={OneCourse}>
         <OneCourse />
       </Route>
+      <Route>
+
+      </Route>
     </Switch>
   )
 }
@@ -27,13 +32,15 @@ const Routing = () => {
 function App() {
   return (
     <div className="App">
-      
+    
       <BrowserRouter>
+      <AuthProvider>
       <NavBar />
       <Routing/>
       <Footer />
+      </AuthProvider>
       </BrowserRouter>
-      
+     
     </div>
   );
 }
