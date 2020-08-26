@@ -1,16 +1,15 @@
-import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { useHistory, Link, NavLink } from 'react-router-dom';
+import React, {  useContext, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 
 const NavBar = () => {
   const authContext =  useContext(AuthContext)
-
  const renderList = () => {
    
    if(authContext.authState.token){
      console.log(authContext.authState.token)
      return[
-     <li><button onClick={authContext.logOut}>logout</button></li>,
+     <li><button onClick={authContext.logOut} >logout</button></li>,
      
      ]
    }else
@@ -22,6 +21,7 @@ const NavBar = () => {
    }
  }
 
+ 
 
  return(
   // <!-- Header area -->
@@ -54,7 +54,12 @@ const NavBar = () => {
               <ul class="current-item" id="nav">
               <li class="current-item"><NavLink to="/home">Home</NavLink></li>
       <li class=""><NavLink to="/course">Course</NavLink></li>
-                {renderList()}
+      <li className=""><NavLink to="/admin">dashboard</NavLink></li>
+                {/* {renderList()} */}
+                {authContext.authState.token ? <li><button  onClick={authContext.logOut} >logout</button></li> : [
+                  <li>  <Link to='/login'>Login</Link></li>,
+                  <li><Link to="/signup">Signup</Link></li>
+                ] }
               </ul>
 
             </div>

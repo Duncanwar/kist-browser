@@ -60,7 +60,6 @@ const  Course = () => {
             </div>
             </div>
  ) })};
- <Footer />
  </div>
 
     );

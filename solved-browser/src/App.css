@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
 body{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 .signup{
     display: flex;
@@ -18,5 +18,17 @@ body{
     flex-grow: 100%;
 } */
 .navs{
-    background-color: rgb(11, 167, 206);
+    /* background-color: rgb(11, 167, 206); */
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.wrapper {
+    display: flex;
+    margin-top: 10%;
+    background-color: aquamarine;
+    margin-right: 90%;
 }

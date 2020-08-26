@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return(
   
-        <footer class="footer-area section-padding-80-0">
-          <hr />
+        <footer class="">
+          <hr/>
    <div class="container">
      <div class="row">
  
-     
+     <hr />
        <div class="col-12 col-sm-6 col-lg-6  ">
          <div class="single-footer-widget mb-80">
            <h4 class="widget-title">About Us</h4>
