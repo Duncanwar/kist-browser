@@ -3,8 +3,16 @@ import Sidebar  from './components/nav/sidebar'
 
 const Admin = () => {
     return (
-        <div style={{backgroundColor:"yellow"}}>
-            <Sidebar/>
+        <div className='row' style={{backgroundColor:"yellow"}}>
+            <div className='col-sm-4'>
+             
+            <Sidebar>
+            <div className="col-sm-1" style={{backgroundColor:'blue'}}>Duncan</div> 
+                </Sidebar>
+            
+            </div>
+            
+           
         </div>
     );
 };

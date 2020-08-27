@@ -8,7 +8,6 @@ import Admin from './Admin'
 const AdminRoutes = ({children, ...rest}) =>{
 return(
    <Route {...rest}>
-
   {children}
 
   </Route>
@@ -47,7 +46,7 @@ const Routing = () => {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
     
       <BrowserRouter>
       <AuthProvider>

@@ -25,7 +25,9 @@ const NavBar = () => {
 
  return(
   // <!-- Header area -->
-  <header class="navs header-area">
+ 
+  <div className='row'>
+  <header class="navs header-area col-sm-12">
 
     <div class="main-header-area">
       <div class="classy-nav-container breakpoint-off">
@@ -52,6 +54,7 @@ const NavBar = () => {
             {/* <!-- Navbar link --> */}
             <div class="classynav">
               <ul class="current-item" id="nav">
+
               <li class="current-item"><NavLink to="/home">Home</NavLink></li>
       <li class=""><NavLink to="/course">Course</NavLink></li>
       <li className=""><NavLink to="/admin">dashboard</NavLink></li>
@@ -60,6 +63,7 @@ const NavBar = () => {
                   <li>  <Link to='/login'>Login</Link></li>,
                   <li><Link to="/signup">Signup</Link></li>
                 ] }
+                <li><NavLink to=''></NavLink></li>
               </ul>
 
             </div>
@@ -69,6 +73,7 @@ const NavBar = () => {
       </div>
     </div>
   </header>
+  </div>
  )   
 }
 

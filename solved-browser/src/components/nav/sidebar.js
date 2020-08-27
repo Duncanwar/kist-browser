@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const sidebar = () => {
     return (   
-        <div class="wrapper">
+        <div class="wrapper col-sm-4 fixed">
         {/* <!-- Sidebar --> */}
         <nav id="sidebar">
             <div class="sidebar-header">
