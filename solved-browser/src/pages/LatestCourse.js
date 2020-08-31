@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+
 
 const LatestCourse = () => {
     return (
@@ -34,7 +36,7 @@ const LatestCourse = () => {
       <div className="row poca-portfolio">
 
       {/* <!-- Single gallery Item --> */}
-      <a href="course-desc.html">
+      <Link href="course-desc.html">
         <div className="col-12 col-md-6 single_gallery_item moto wow fadeInUp" data-wow-delay="0.2s">
           {/* <!-- Welcome course Area --> */}
           <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -58,10 +60,10 @@ const LatestCourse = () => {
               <div className="likes-share-download d-flex align-items-center justify-content-between">
                 <ul className="files-action">
                   <li className="dropdown  ">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i className="fa fa-ellipsis-v"></i></a>
+                      <Link href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i className="fa fa-ellipsis-v"></i></Link>
                       <div className="dropdown-menu">
-                          <a className="dropdown-item" href="#">new</a>
-                          <a className="dropdown-item" href="#" data-toggle="modal" data-target="#addtoplaylist">Add to playlist  </a>
+                          <Link className="dropdown-item" href="#">new</Link>
+                          <Link className="dropdown-item" href="#" data-toggle="modal" data-target="#addtoplaylist">Add to playlist  </Link>
                       </div>
                   </li>
               </ul>
@@ -69,16 +71,16 @@ const LatestCourse = () => {
   
                 <div>
   
-                  <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                  <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </a>
+      </Link>
   
         {/* <!-- Single gallery Item --> */}
-        <a href="course-desc.html">
+        <Link href="course-desc.html">
         <div className="col-12 col-md-6 single_gallery_item moto wow fadeInUp" data-wow-delay="0.2s">
           {/* <!-- Welcome course Area --> */}
           <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -101,16 +103,16 @@ const LatestCourse = () => {
   
                 <div>
   
-                  <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                  <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </a>
+        </Link>
   
         {/* <!-- Single gallery Item --> */}
-        <a href="course-desc.html">
+        <Link href="course-desc.html">
         <div className="col-12 col-md-6 single_gallery_item media wow fadeInUp" data-wow-delay="0.2s">
           {/* <!-- Welcome course Area --> */}
           <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -133,16 +135,16 @@ const LatestCourse = () => {
   
                 <div>
   
-                  <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                  <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </a>
+        </Link>
   
         {/* <!-- Single gallery Item --> */}
-        <a href="course-desc.html">
+        <Link href="course-desc.html">
         <div className="col-12 col-md-6 single_gallery_item media wow fadeInUp" data-wow-delay="0.2s">
           {/* <!-- Welcome course Area --> */}
           <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -165,16 +167,16 @@ const LatestCourse = () => {
   
                 <div>
   
-                  <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                  <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </a>
+        </Link>
   
         {/* <!-- Single gallery Item --> */}
-        <a href="course-desc.html">
+        <Link href="course-desc.html">
         <div className="col-12 col-md-6 single_gallery_item tech  wow fadeInUp" data-wow-delay="0.2s">
           {/* <!-- Welcome course Area --> */}
           <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -197,16 +199,16 @@ const LatestCourse = () => {
   
                 <div>
   
-                  <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                  <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </a>
+        </Link>
   
         {/* <!-- Single gallery Item --> */}
-        <a href="course-desc.html">
+        <Link href="course-desc.html">
         <div className="col-12 col-md-6 single_gallery_item tech  fadeInUp" data-wow-delay="0.2s">
           {/* <!-- Welcome course Area --> */}
           <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -229,15 +231,15 @@ const LatestCourse = () => {
   
                 <div>
   
-                  <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                  <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </a>
+        </Link>
                 {/* <!-- Single gallery Item --> */}
-                <a href="course-desc.html">
+                <Link href="course-desc.html">
                 <div className="col-12 col-md-6 single_gallery_item Truck wow fadeInUp" data-wow-delay="0.2s">
                   {/* <!-- Welcome course Area --> */}
                   <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -262,16 +264,16 @@ const LatestCourse = () => {
         
                         <div>
         
-                          <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                          <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                </a>
+                </Link>
         
                 {/* <!-- Single gallery Item --> */}
-                <a href="course-desc.html">
+                <Link href="course-desc.html">
                 <div className="col-12 col-md-6 single_gallery_item entre Truck wow fadeInUp" data-wow-delay="0.2s">
                   {/* <!-- Welcome course Area --> */}
                   <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
@@ -294,13 +296,13 @@ const LatestCourse = () => {
         
                         <div>
         
-                          <a href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</a>
+                          <Link href="#"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                </a>
+                </Link>
   
       </div>
     </div>
@@ -308,12 +310,12 @@ const LatestCourse = () => {
     <div className="container">
       <div className="row">
         <div className="col-12 text-center">
-          <a href="Course.html" className="btn poca-btn mt-70">Load More</a>
+          <Link href="Course.html" className="btn poca-btn mt-70">Load More</Link>
         </div>
       </div>
     </div>
   </section>
-  {/* <!-- Latest course end --></a> */}
+  {/* <!-- Latest course end --></Link> */}
 
   {/* <!-- process end --> */}
         </div>

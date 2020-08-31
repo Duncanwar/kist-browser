@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
 
 
 
 
 body{
-    background-color: blueviolet;
+    /* x    background-color: blueviolet; */
 }
 .signup{
     display: flex;
@@ -45,4 +44,3 @@ body{
 .table{
     margin-top: 10%;
 }
-

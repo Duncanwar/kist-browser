@@ -8,6 +8,7 @@ import Users from './pages/Users';
 import CreateCourse from './pages/CreateCourse';
 import Home from './pages/Home'
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 const AdminRoutes = ({children, ...rest}) =>{
 return(
@@ -33,12 +34,17 @@ const Routing = () => {
       <Route path="/signup">
         
         <SignUp/>
-        
       </Route>
       <Route path='/course'>
       
         <Course />
         
+      </Route>
+      <Route path='/contact'>
+        <Contact />
+      </Route>
+      <Route path='/about'>
+        <About />
       </Route>
       <Route path='/admin'>
       <AdminRoutes>
@@ -46,7 +52,6 @@ const Routing = () => {
       </AdminRoutes>
       </Route>
       <Route path='/login'>
-      
       <LogIn/>
       </Route>
       <Route path='/allUsers'>
@@ -58,10 +63,6 @@ const Routing = () => {
       <Route>
         <CreateCourse />
       </Route>
-      <Route path='/about'>
-        <About />
-      </Route>
-
     </Switch>
   )
 }
