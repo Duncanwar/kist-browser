@@ -23,7 +23,7 @@ return(
             
 <div class="col mb-4">
  <div class="card">
-        <h5 class="card-title">{}</h5>
+       <Link to={`/course/${courseName}`}> <h5 class="card-title">{course.courseName}</h5> </Link>
    <img src={course.coursePhoto} class="card-img-top thumbnail" alt=""/>
    <div class="card-body">
         

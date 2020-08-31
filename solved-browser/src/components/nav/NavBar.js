@@ -4,8 +4,9 @@ import { AuthContext } from '../../context/AuthContext';
 
 const NavBar = () => {
   const authContext =  useContext(AuthContext)
+  // authContext.isAdmin()
  const renderList = () => {
-   
+ 
    if(authContext.authState.token){
      console.log(authContext.authState.token)
      return[
@@ -26,53 +27,49 @@ const NavBar = () => {
  return(
   // <!-- Header area -->
  
-  <div className='row'>
-  <header class="navs header-area col-sm-12">
+  <div className=''>
+  <header className="header-area ">
 
-    <div class="main-header-area">
-      <div class="classy-nav-container breakpoint-off">
+<div className="main-header-area">
+  <div className="classy-nav-container breakpoint-off">
 
-        <nav class="classy-navbar justify-content-between" id="pocaNav">
+    <nav className="classy-navbar justify-content-between" id="pocaNav">
 
-          {/* <!-- Logo --> */}
-          <Link class="nav-brand" to="/home"><img src="assets/img/core-img/lo-go.png.png" alt="" class="img-fluid"  id="black-logo"/></Link>
-          <Link class="nav-brand" to="/home" ><img src="assets/img/core-img/white-logo.png" alt="" class="img-fluid" id="white-logo"/></Link>
-    
-          {/* <!-- Navbar Toggler --> */}
-          <div class="classy-navbar-toggler">
-            <span class="navbarToggler"><span></span><span></span><span></span></span>
-          </div>
+      {/* <!-- Logo --> */}
+      <NavLink className="nav-brand" to="/home"><img src="assets/img/core-img/lo-go.png.png" alt="" className="img-fluid"  id="black-logo"/></NavLink>
+      <NavLink className="nav-brand" to="/home" ><img src="assets/img/core-img/white-logo.png" alt="" className="img-fluid" id="white-logo"/></NavLink>
 
-          {/* <!-- Menu --> */}
-          <div class="classy-menu">
-
-            {/* <!-- Menu Close Button --> */}
-            <div class="classycloseIcon">
-              <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-            </div>
-
-            {/* <!-- Navbar link --> */}
-            <div class="classynav">
-              <ul class="current-item" id="nav">
-
-              <li class="current-item"><NavLink to="/home">Home</NavLink></li>
-      <li class=""><NavLink to="/course">Course</NavLink></li>
-      <li className=""><NavLink to="/admin">dashboard</NavLink></li>
-                {/* {renderList()} */}
-                {authContext.authState.token ? <li><button  onClick={authContext.logOut} >logout</button></li> : [
-                  <li>  <Link to='/login'>Login</Link></li>,
-                  <li><Link to="/signup">Signup</Link></li>
-                ] }
-                <li><NavLink to=''></NavLink></li>
-              </ul>
-
-            </div>
-            {/* <!-- Nav End --> */}
-          </div>
-        </nav>
+      {/* <!-- Navbar Toggler --> */}
+      <div className="classy-navbar-toggler">
+        <span className="navbarToggler"><span></span><span></span><span></span></span>
       </div>
-    </div>
-  </header>
+
+      {/* <!-- Menu --> */}
+      <div className="classy-menu">
+
+        {/* <!-- Menu Close Button --> */}
+        <div className="classycloseIcon">
+          <div className="cross-wrap"><span className="top"></span><span className="bottom"></span></div>
+        </div>
+
+        {/* <!-- Navbar link --> */}
+        <div className="classynav">
+          <ul id="nav">
+            <li className="current-item"><NavLink to="/home">Home</NavLink></li>
+            <li><NavLink to="/course">Course</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
+            <li  ><NavLink to="/play-list.html">My Course</NavLink></li>
+          </ul>
+
+        </div>
+        {/* <!-- Nav End --> */}
+      </div>
+    </nav>
+  </div>
+</div>
+</header>
+
   </div>
  )   
 }

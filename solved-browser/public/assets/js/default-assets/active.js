@@ -29,29 +29,18 @@
       animateIn: 'fadeIn',
       animateOut: 'fadeOut'
     })
-    welcomeSlider.on('translate.owl.carousel', function() {
-      var layer = $("[data-animation]");
-      layer.each(function() {
-        var anim_name = $(this).data('animation');
-        $(this).removeClass('animated ' + anim_name).css('opacity', '0');
-      });
-    });
-    $("[data-delay]").each(function() {
-      var anim_del = $(this).data('delay');
-      $(this).css('animation-delay', anim_del);
-    });
-    $("[data-duration]").each(function() {
-      var anim_dur = $(this).data('duration');
-      $(this).css('animation-duration', anim_dur);
-    });
-    welcomeSlider.on('translated.owl.carousel', function() {
-      var layer = welcomeSlider.find('.owl-item.active').find("[data-animation]");
-      layer.each(function() {
-        var anim_name = $(this).data('animation');
-        $(this).addClass('animated ' + anim_name).css('opacity', '1');
-      });
-    });
+
+
+
   }
+  	var loader = function() {
+		setTimeout(function() { 
+			if($('#ftco-loader').length > 0) {
+				$('#ftco-loader').removeClass('show');
+			}
+		}, 1);
+	};
+	loader();
 
   // ***********************************
   // :: 4.0 Tooltip Active Code
@@ -60,12 +49,6 @@
     $('[data-toggle="tooltip"]').tooltip();
   }
 
-  // ***********************************
-  // :: 5.0 WOW Active Code
-  // ***********************************
-  if(poca_window.width() > 767) {
-    new WOW().init();
-  }
 
   // ***********************************
   // :: 8.0 ImagesLoaded Active Code
@@ -94,21 +77,14 @@
     $(this).addClass('active');
   })
 
-  // ***********************************
-  // :: 9.0 Jarallax Active Code
-  // ***********************************
-  if($.fn.jarallax) {
-    $('.jarallax').jarallax({
-      speed: 0.2
-    });
-  }
+ 
 
   // ***********************************
   // :: 10.0 Scrollup Active Code
   // ***********************************
   if($.fn.scrollUp) {
     poca_window.scrollUp({
-      scrollSpeed: 2000,
+      scrollSpeed: 500,
       scrollText: '<i class="fa fa-angle-up"</i>'
     });
   }

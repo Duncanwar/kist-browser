@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
+
+
+
+
 body{
     background-color: blueviolet;
 }
@@ -18,10 +23,10 @@ body{
     flex-wrap: wrap;
     flex-grow: 100%;
 } */
-.navs{
+ .navs{
     /* background-color: rgb(11, 167, 206); */
 }
-
+/* 
 .sidebar{
     display: flex;
     flex-direction: row;
@@ -35,4 +40,9 @@ body{
 }
 .admin{
     margin-top: 10%;
+} */
+
+.table{
+    margin-top: 10%;
 }
+

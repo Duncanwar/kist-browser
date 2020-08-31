@@ -17,7 +17,7 @@ const AuthProvider = ({ children }) => {
 
 
     const setAuthInfo = ({token, data, message}) => {
-        console.log(message,data)
+        
         localStorage.setItem('token',token)
         localStorage.setItem('userInfo',
         JSON.stringify(data))
@@ -27,6 +27,7 @@ const AuthProvider = ({ children }) => {
             userInfo,
             message
         });
+        console.log(authState)
     };
 
 const logOut = () =>{
@@ -36,11 +37,22 @@ localStorage.removeItem('userInfo');
 history.push('/login');
 }
 
+// const isAdmin = () => {
+//     console.log(authState)
+//     if(authState.userInfo.role === 'admin'){
+// history.push('/dashboard');
+//     }
+//     else{
+//         history.push('/course')
+//     }
+// }
+
 return(
     <Provider value={{
         authState,
         setAuthState: authInfo => setAuthInfo(authInfo),
-        logOut 
+        logOut,
+        // isAdmin
     }}>
 {children}
     </Provider>

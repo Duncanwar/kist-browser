@@ -4,6 +4,10 @@ import {useHistory, Switch, Route, BrowserRouter,} from 'react-router-dom';
 import {NavBar, SignUp, Course, LogIn, OneCourse, Footer,AdminNav} from '../src/components/index'
 import {AuthProvider} from './context/AuthContext'
 import Admin from './Admin'
+import Users from './pages/Users';
+import CreateCourse from './pages/CreateCourse';
+import Home from './pages/Home'
+import About from './pages/About';
 
 const AdminRoutes = ({children, ...rest}) =>{
 return(
@@ -21,12 +25,20 @@ const Routing = () => {
 
   return(
     <Switch>
-      
+
+<Route exact path='/home'>
+        <Home/>
+      </Route>
+
       <Route path="/signup">
+        
         <SignUp/>
+        
       </Route>
       <Route path='/course'>
+      
         <Course />
+        
       </Route>
       <Route path='/admin'>
       <AdminRoutes>
@@ -34,10 +46,20 @@ const Routing = () => {
       </AdminRoutes>
       </Route>
       <Route path='/login'>
-        <LogIn/>
+      
+      <LogIn/>
+      </Route>
+      <Route path='/allUsers'>
+        <Users />
       </Route>
       <Route exact path='/course/:courseName' component={OneCourse}>
         <OneCourse />
+      </Route>
+      <Route>
+        <CreateCourse />
+      </Route>
+      <Route path='/about'>
+        <About />
       </Route>
 
     </Switch>
@@ -46,12 +68,12 @@ const Routing = () => {
 
 function App() {
   return (
-    <div className="App container">
+    <div className="">
     
       <BrowserRouter>
       <AuthProvider>
       <AdminRoutes/>
-      <NavBar />
+      <NavBar/>
       <Routing/>
       <Footer />
       </AuthProvider>

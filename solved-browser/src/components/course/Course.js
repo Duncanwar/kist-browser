@@ -20,7 +20,7 @@ const  Course = () => {
  { data.map(course => {
         return(
         <div>
-          <div class="container">
+        
             <div class="row poca-portfolio">
         
               {/* <!-- Single gallery Item --> */}
@@ -56,7 +56,6 @@ const  Course = () => {
                 </div>
               </div>
             </a>
-            </div>
             </div>
             </div>
  ) })};
