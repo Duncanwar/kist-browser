@@ -2,10 +2,10 @@
 
 
 
-
+/* 
 body{
-    /* x    background-color: blueviolet; */
-}
+        background-color: blueviolet;
+} */
 .signup{
     display: flex;
     flex-direction: column;
@@ -22,9 +22,9 @@ body{
     flex-wrap: wrap;
     flex-grow: 100%;
 } */
- .navs{
-    /* background-color: rgb(11, 167, 206); */
-}
+ /* .navs{
+    background-color: rgb(11, 167, 206);
+} */
 /* 
 .sidebar{
     display: flex;
@@ -43,4 +43,9 @@ body{
 
 .table{
     margin-top: 10%;
+}
+.thumbnails
+{
+    display: flex;
+    flex-wrap:wrap-reverse;
 }

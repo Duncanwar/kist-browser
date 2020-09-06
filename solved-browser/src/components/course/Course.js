@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import Axios from 'axios';
 import Block from './block'
-import { Footer } from '..';
+
 
 const  Course = () => {
     const [data,setData] = useState([])
@@ -19,37 +19,37 @@ const  Course = () => {
    <Block />
  { data.map(course => {
         return(
-        <div>
+        <div className="thumbnails">
         
-            <div class="row poca-portfolio">
+            <div className="row poca-portfolio thumbnails ">
         
               {/* <!-- Single gallery Item --> */}
               <a href="course-desc.html">
-              <div class="col-12 col-md-6 single_gallery_item moto wow fadeInUp" data-wow-delay="0.2s">
+              <div className="col-12 col-md-6 single_gallery_item moto wow fadeInUp" data-wow-delay="0.2s">
                 {/* <!-- Welcome course Area --> */}
-                <div class="poca-course-area style-2 d-flex align-items-center flex-wrap">
-                  <div class="poca-course-thumbnail">
+                <div className="poca-course-area style-2 d-flex align-items-center flex-wrap">
+                  <div className="poca-course-thumbnail">
         
-                    <img src={course.coursePhoto} alt=""/>
+                    <img className=""src={course.coursePhoto} alt=""/>
                   </div>
         
         
-                  <div class="poca-course-content text-center">
-                    <span class="course-published-date mb-2">December 9, 2018</span>
+                  <div className="poca-course-content text-center">
+                    <span className="course-published-date mb-2">December 9, 2018</span>
         <h2>{course.courseName}</h2>
         
                     {/* <!-- course Player --> */}
-                    <div class="poca-course-player">
+                    <div className="poca-course-player">
                       <audio preload="auto" controls>
                         <source src={course.courseAudio} />
                       </audio>
                     </div>
                     {/* <!-- Likes, Share & Download --> */}
-                    <div class="likes-share-download d-flex align-items-center justify-content-between">
+                    <div className="likes-share-download d-flex align-items-center justify-content-between">
         
                       <div>
         
-                        <Link to="/"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
+                        <Link to="/"><i className="fa fa-download" aria-hidden="true"></i> Download (12)</Link>
                       </div>
                     </div>
                   </div>

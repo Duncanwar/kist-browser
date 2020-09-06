@@ -76,13 +76,13 @@ const Home = () => {
 						<div>
 							<div class="weekly_title"><h1>Get updated with Our Course</h1></div>
 							<div class="weekly_text">
-								<p>Cras congue et risus eget congue. Integer id justo non orci suscipit cursus a scelerisque libero. Fusce in tortor mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas euismod sed magna.</p>
+								<p>Cras congue et risus eget congue. Integer id justo non orci suscipit cursus Link scelerisque libero. Fusce in tortor mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas euismod sed magna.</p>
 							</div>
 							<div class="shops d-flex flex-row align-items-start justify-content-start flex-wrap ">
-								<div class="button_border"><a href="#" >Taxi</a></div>
-								<div class="button_border"><a href="#" >Bus</a></div>
-                <div class="button_border"><a href="#" >Moto</a></div>
-                <div class="button_border"><a href="#" >Trucks</a></div>
+								<div class="button_border"><Link to="#" >Taxi</Link></div>
+								<div class="button_border"><Link to="#" >Bus</Link></div>
+                <div class="button_border"><Link to="#" >Moto</Link></div>
+                <div class="button_border"><Link to="#" >Trucks</Link></div>
 
 							</div>
 						</div>
