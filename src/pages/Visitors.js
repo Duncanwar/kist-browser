@@ -7,7 +7,6 @@ const [d,setD] = useState([]);
     useEffect(()=>{
     allUsers();
   }, []);
-  
   const allUsers = async () =>{
     const user = await Axios('https://pvs-backend.herokuapp.com/adrielsoft/visitor');
     setUsers(user.data)
@@ -17,14 +16,10 @@ const [d,setD] = useState([]);
 <div>
 <table className="responsive-table striped">
   <thead>
-   
   {(delete d[4])}
-  
     <tr>
     <th scope="col">#</th>
-    
-    {d.map((d,i)=> {
-     
+    {d.map((d,i)=> {    
       return( 
       <th key={i} scope="col">{d}</th>
       )   
@@ -34,7 +29,6 @@ const [d,setD] = useState([]);
   </thead>
 {users.map((user,i) => {
      return(
-    
   <tbody  key={i}>
     <tr>
     <th scope="row">{i+1}</th>
@@ -49,7 +43,6 @@ const [d,setD] = useState([]);
      <td>{<i className="material-icons">delete</i>}{}</td>
     </tr>
     </tbody>
-    
     )
      })}
      </table>
