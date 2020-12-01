@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const CreateCourse = () => {
-    const [courseName,setCourseName]= useState('');
-    const [coursePhoto,setCoursePhoto] = useState('');
-    const [courseAudio,setCourseAudio] = useState('');
-    const [coursePrice, setCoursePrice] = useState('');
+    // const [courseName,setCourseName]= useState('');
+    // const [coursePhoto,setCoursePhoto] = useState('');
+    // const [courseAudio,setCourseAudio] = useState('');
+    // const [coursePrice, setCoursePrice] = useState('');
 
 useEffect(()=>{
 
