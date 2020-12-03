@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Axios from "axios";
-import {useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom";
+import M from "materialize-css";
+
 const CreateCourse = () => {
   const history = useHistory();
     const [firstName, setFirstName]= useState('');
@@ -9,20 +11,21 @@ const CreateCourse = () => {
     const [password,setPassword] = useState('');
     const [status, setStatus] = useState('');
     const [type, setType] = useState('');
+
     useEffect(()=>{
 });
+
 const saveData = async () => {
-  const user = await Axios.post('https://pvs-backend.herokuapp.com/adrielsoft/visitor',{
+  await Axios.post('https://pvs-backend.herokuapp.com/adrielsoft/visitor',{
     firstName,lastName,phone,password,status,type
   });
-  if(user){
-    history.push('/visitor')
-  }
+  M.toast({html:"invalid email", classes:["rounded","valign-wrapper","center-align"] })
 }
     return (
         <div>
            <div className="signup">
           <div class="form-group">
+            <h1> Register For A Visit</h1>
             <label for="drivingLicense">First Name</label>
             <input value={firstName} onChange={(e)=>setFirstName(e.target.value)} type="text" class="form-control" id="fistName" aria-describedby="emailHelp"/>
           </div>

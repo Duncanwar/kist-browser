@@ -5,6 +5,10 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 10%;
+    margin: 0 10%;
+    margin-top: 5 ;
     border-radius: 5px;
+}
+input {
+    text-align: center;
 }

@@ -12,6 +12,9 @@ const [d,setD] = useState([]);
     setUsers(user.data)
     setD(Object.keys(user.data[0]))
 }
+const deleteUser = async (userId) => {
+  const user = await Axios.delete('https://pvs-backend.herokuapp.com/adrielsoft/visitor')
+}
     return (
 <div>
 <table className="responsive-table striped">
