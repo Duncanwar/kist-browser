@@ -32,8 +32,8 @@ const Routing = () => {
       </Route>
     </Switch>
   )
-}
 
+}
 function App() {
   return (
     <div className="">
