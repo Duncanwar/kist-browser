@@ -5,6 +5,8 @@ import {AuthProvider} from './context/AuthContext'
 import Users from './pages/Visitors';
 import CreateCourse from './pages/CreateCourse';
 import AppShell from './AppShell';
+import Login from './pages/Login'
+
 
 const AdminRoutes = ({children, ...rest}) =>{
 return(
@@ -29,6 +31,9 @@ const Routing = () => {
         <AppShell>
         <CreateCourse />
         </AppShell>
+      </Route>
+      <Route path='/login'>
+       <Login/>
       </Route>
     </Switch>
   )
