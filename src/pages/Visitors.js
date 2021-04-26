@@ -5,10 +5,10 @@ const Users = () => {
 const [users,setUsers] = useState([])
 const [d,setD] = useState([]);
     useEffect(()=>{
-    allUsers();
+ //   allUsers();
   }, []);
-  const allUsers = async () =>{
-    const user = await Axios('https://pvs-backend.herokuapp.com/adrielsoft/visitor');
+  const allCars = async () =>{
+    const user = await Axios(``);
     setUsers(user.data)
     setD(Object.keys(user.data[0]))
 }

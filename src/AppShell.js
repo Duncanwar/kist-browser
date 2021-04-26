@@ -5,11 +5,8 @@ import Footer from "./components/Footer";
 
 const AppShell = ({children}) => {
     return (
-        <div className="row">
-      <div className="col s3">
-      <Sidebar/>
-      </div>
-      <div className="col s9">
+        <div className="row content">
+      <div className="col">
       <Navbar/>
       <div className="">
         {children}
