@@ -21,7 +21,7 @@ const Login = () => {
       let data = await axios.post(`${BACKENDURL}/login`,{password,email},options)
       localStorage.setItem('jwt', data.data.token)
       localStorage.setItem('user', JSON.stringify(data.data.data))
-      history.push("/visitors")
+      history.push("/")
       } catch (error) {
         const {data} = error.response
         setError(true)

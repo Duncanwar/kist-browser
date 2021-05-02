@@ -2,8 +2,8 @@ import React, { useEffect, useState }from 'react';
 import './App.css';
 import {useHistory, Switch, Route, BrowserRouter} from 'react-router-dom';
 import {AuthProvider} from './context/AuthContext'
-import Users from './pages/Visitors';
-import CreateCourse from './pages/CreateCourse';
+import Home from './pages/Home';
+import Order from './pages/Order';
 import AppShell from './AppShell';
 import Login from './pages/Login'
 
@@ -22,20 +22,21 @@ const Routing = () => {
   const history = useHistory();
   useEffect(()=>{
 const user = JSON.parse(localStorage.getItem('user'));
-if(user == null){
+if(user){
+console.log("nice")
+}else
   history.push('/login')
-}
   })
   return(
     <Switch>
-      <Route path='/visitors'>
+      <Route exact path='/'>
         <AppShell>
-        <Users />
+        <Home />
         </AppShell>
       </Route>
-      <Route path='/api'>
+      <Route path='/order'>
         <AppShell>
-        <CreateCourse />
+        <Order />
         </AppShell>
       </Route>
       <Route path='/login'>
@@ -49,9 +50,7 @@ function App() {
   return (
     <div className="">
       <BrowserRouter>
-      <AuthProvider>
       <Routing/>
-      </AuthProvider>
       </BrowserRouter>
     </div>
   );
